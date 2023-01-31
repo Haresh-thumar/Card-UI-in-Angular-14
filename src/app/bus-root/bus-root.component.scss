@@ -1,1 +1,78 @@
-@import "./folder/hero2.css";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+// font-family: 'Ubuntu', sans-serif;
+
+/*---- Add New Card Button -----*/
+.add-bus-root-btn {
+  right: 30px;
+  bottom: 30px;
+  position: fixed !important;
+}
+
+/***********************************************************************************************************
+                                          Inner Card
+***********************************************************************************************************/
+
+/*---- Bus Root Inner card ----*/
+.bus-root-card {
+  margin: 15px 10px;
+  border: 1px solid #3f51b5;
+}
+
+.bus-root-header {
+  margin: 8px 25px 3px 25px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bus-root-header h5 {
+  display: flex;
+  align-items: center;
+  color: #444;
+  // margin: 10px 0 12px 0;
+}
+
+.bus-root-header h5 i {
+  margin-right: 10px;
+  color: rgb(255, 152, 152);
+}
+
+/*----------------------------
+            rushabh
+----------------------------*/
+// .valid-record {
+//   margin-top: 20px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .valid-record p {
+//   font-size: 18px;
+// }
+
+// .valid-record p span {
+//   font-weight: bold;
+//   color: red;
+// }
+
+// .invalid-record {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .invalid-record p {
+//   font-size: 18px;
+// }
+
+// .invalid-record p span {
+//   font-weight: bold;
+//   color: rgb(0, 177, 0);
+// }
+
+// .invalid-record p a {
+//   margin-left: 10px;
+//   cursor: pointer;
+//   text-decoration: none;
+// }
