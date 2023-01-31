@@ -1,0 +1,139 @@
+<div class="card transport-main-card">
+
+  <!------------- Add Create Button ------------>
+  <button class="btn btn-default add-card-btn">
+    <i class="material-icons">add</i>
+  </button>
+
+
+  <!----- Add Row ----->
+  <div class="row">
+
+
+    <!--********************************************************************************************************************************************
+                                                                  Complete Show Card
+    *********************************************************************************************************************************************-->
+
+    <!----- Add Column ----->
+    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [1]">
+      <!----- Add Card ----->
+      <div class="card pickup-card">
+        <!------------------------ Header Title Content --------------------->
+        <ng-container>
+          <div class="pickup-point-header">
+            <h5 class="pickup-align header-text">
+              <i class="material-icons">my_location</i> Punjakutta Central... (area)
+            </h5>
+            <div class="pickup-align hover-to-show">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch1">
+                <label class="custom-control-label" for="switch1" style="cursor: pointer!important;"></label>
+              </div>
+              <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
+              <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+            </div>
+          </div>
+        </ng-container>
+        <!----- Header Edit Mode ----->
+        <!-- <ng-container>
+          <div class="pickup-point-header">
+            <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
+            <div class="pickup-align">
+              <button class="pp-save-action">
+                <i class="material-icons pp-action">save</i>
+              </button>
+            </div>
+          </div>
+        </ng-container> -->
+
+        <!----- Add HR Line ----->
+        <hr class="pickup-Header-Hr">
+
+        <!------------------------- Body Content ----------------------->
+        <ng-container *ngFor="let item of [1,2]">
+          <ng-container>
+            <div class="pickup-content-header">
+              <h5 class="pickup-align pickup-content-text">
+                <i class="material-icons">pin_drop</i> Punjakutta Central... (area)
+              </h5>
+              <div class="pickup-align hover-to-show">
+                <div class="custom-switch">
+                  <input type="checkbox" class="custom-control-input">
+                  <label class="custom-control-label" for="switch2" style="cursor: pointer!important;"></label>
+                </div>
+                <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
+                <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+              </div>
+            </div>
+          </ng-container>
+          <!----- Content Edit Mode ----->
+          <!-- <ng-container>
+            <div class="pickup-content-header">
+              <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
+              <div class="pickup-align">
+                <button class="pp-save-action">
+                  <i class="material-icons pp-action">save</i>
+                </button>
+              </div>
+            </div>
+          </ng-container> -->
+          <!----- Bus Root Content ----->
+          <div class="pickup-bus-root" *ngFor="let item of [1,2]">
+            <p class="bus-root-title">
+              <i class="material-icons">directions_bus</i> police academy circle... (bus root)
+            </p>
+          </div>
+        </ng-container>
+        <div class="pickup-content-header">
+          <button class="btn btn-default add-pickup-btn">Add Pickup</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!--********************************************************************************************************************************************
+                                                                    Add New Card
+    *********************************************************************************************************************************************-->
+    <!----- Add Column ----->
+    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [1]">
+      <!----- Add Card ----->
+      <div class="card add-new-card">
+        <!------------------------ Header Title Content --------------------->
+        <ng-container>
+          <div class="pickup-point-header">
+            <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
+            <div class="pickup-align">
+              <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+            </div>
+          </div>
+        </ng-container>
+
+        <!----- Add HR Line ----->
+        <hr class="pickup-Header-Hr">
+
+        <!------------------------- Body Content ----------------------->
+        <ng-container *ngFor="let item of [1,2]">
+          <!----- Content Edit Mode ----->
+          <ng-container>
+            <div class="pickup-content-header">
+              <input type="password" class="form-control add-area-input" placeholder="Enter Area Name">
+              <div class="pickup-align">
+                <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+              </div>
+            </div>
+          </ng-container>
+          <!----- Bus Root Content ----->
+          <ng-template class="pickup-bus-root" *ngFor="let item of [1,2]">
+            <p class="bus-root-title">
+              <i class="material-icons">directions_bus</i> police academy circle... (bus root)
+            </p>
+          </ng-template>
+        </ng-container>
+        <div class="pickup-content-header">
+          <button class="btn btn-default add-pickup-btn">Add Pickup</button>
+          <button class="btn btn-default add-done-btn">Done</button>
+        </div>
+      </div>
+    </div>
+
+  </div>

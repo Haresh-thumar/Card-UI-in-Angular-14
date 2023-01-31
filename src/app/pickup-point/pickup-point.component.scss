@@ -1,0 +1,449 @@
+/* Global Align-item-center */
+.pickup-align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*----- Add New Card Button ------*/
+.add-card-btn {
+  right: 20px;
+  bottom: 20px;
+  color: #fff;
+  display: flex;
+  border-radius: 50%;
+  padding: 10px 10px;
+  position: absolute;
+  align-items: center;
+  background: #00c714;
+  justify-content: center;
+}
+
+.add-card-btn:focus {
+  box-shadow: none;
+}
+
+/* for Transport Main Card */
+.transport-main-card {
+  padding: 15px;
+  height: 96vh;
+  margin: 15px;
+  border: none;
+  overflow: auto;
+  min-height: 100%;
+  max-height: 100%;
+  background: #edf7ff;
+}
+
+/* Scrollbar Width */
+.transport-main-card::-webkit-scrollbar {
+  width: 20px;
+  border-radius: 10px;
+}
+
+/* Scrollbar Track */
+.transport-main-card::-webkit-scrollbar-track {
+  background: #e2e2e2;
+  border-left: 9px solid white;
+  border-right: 9px solid white;
+}
+
+/* Scrollbar Handle */
+.transport-main-card::-webkit-scrollbar-thumb {
+  background: #04a9f5;
+  border-left: 7px solid white;
+  border-right: 7px solid white;
+}
+
+/***************************************************************
+                        Pickup Card Header
+***************************************************************/
+/* Inside Pickup Card */
+.pickup-card {
+  border-radius: 5px;
+  padding-bottom: 13px;
+  margin: 15px;
+  border: 0;
+  box-shadow: 0 3px 5px #d8d8d8;
+}
+
+/* Pickup Card Header */
+.pickup-point-header {
+  display: flex;
+  cursor: pointer;
+  padding: 8px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Pickup Header Action Hide */
+.hover-to-show {
+  display: none;
+}
+
+/* Pickup Card Header Hover to Show */
+.pickup-point-header:hover .hover-to-show {
+  display: flex;
+}
+
+/* Pickup Header Text */
+.header-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: #b4b4b4;
+  letter-spacing: 0.2px;
+  margin: 1px 0 0.15rem 0;
+}
+
+/* Pickup Header Icon */
+.header-text i {
+  margin: -0.5px 8px 0 0;
+  color: #ff7979;
+}
+
+/* Pickup Edit Content */
+.pickup-input {
+  width: 23vw !important;
+  max-width: 100%;
+  height: 30px;
+}
+.pickup-input::placeholder {
+  top: -1px;
+  font-size: 14px;
+  color: #b8b8b8;
+  position: relative;
+  letter-spacing: 0.2px;
+}
+.pickup-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Pickup Header Action Button */
+.pp-action {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Pickup Header Save Button */
+.pp-save-action {
+  margin: 0 5px;
+  padding: 7px 2.3px;
+  border-radius: 50%;
+  border: 0;
+  background: #04a9f5;
+  display: flex;
+  align-items: center;
+}
+
+/* Pickup Header Save Icon */
+.pp-save-action i {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Pickup Header Custom HR */
+hr.pickup-Header-Hr {
+  margin: 0 0;
+  border-top: 1px solid #e3e3e3;
+}
+
+/***************************************************************
+                      Pickup Card Content
+***************************************************************/
+/* Pickup Content Text */
+.pickup-content-header {
+  padding: 0 40px;
+  margin-top: 10px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Pickup Card Header Hover to Show */
+.pickup-content-header:hover .hover-to-show {
+  display: flex;
+}
+
+/* Pickup Content Icon */
+.pickup-content-text i {
+  margin: -0.5px 8px 0 0;
+  color: #04a9f5;
+}
+
+/* Pickup Content Text */
+.pickup-content-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 3px 0 0.15rem 0;
+}
+
+/**************************************************************
+                        Pickup Bus Root
+**************************************************************/
+/* Bus Root Content */
+.pickup-bus-root {
+  padding: 0px 71px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Bus Root Title */
+.bus-root-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #adadad;
+  letter-spacing: 0.2px;
+  margin: 3px 0 0.1rem 0;
+}
+
+/* Bus Root Title Icon */
+.bus-root-title i {
+  top: 2px;
+  position: relative;
+  font-size: 15.5px;
+  color: #fc9595;
+}
+
+/* Pickup Button */
+.add-pickup-btn {
+  background: #04a9f5;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+
+/* Submit Button */
+.add-done-btn {
+  background: #00c714;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  margin-left: 5px;
+}
+
+/* Pickup Button */
+.add-pickup-btn:focus {
+  box-shadow: none;
+}
+
+/* Submit Button */
+.add-done-btn:focus {
+  box-shadow: none;
+}
+
+/**************************************************************
+                        Add New Card
+**************************************************************/
+/* Inside Pickup Card */
+.add-new-card {
+  border-radius: 5px;
+  padding-bottom: 10px;
+  margin: 15px;
+  border: 0;
+  box-shadow: 0 3px 5px #d8d8d8;
+}
+
+/* Pickup Edit Content */
+.add-area-input {
+  width: 23vw !important;
+  max-width: 100%;
+  height: 30px;
+  margin: 3px 0 3px 0;
+}
+
+/* Add Card Custm Input */
+.add-area-input::placeholder {
+  top: -1px;
+  font-size: 14px;
+  color: #b8b8b8;
+  position: relative;
+  letter-spacing: 0.2px;
+}
+.add-area-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/**************************************************************
+                      For Responsive Screen
+**************************************************************/
+@media screen and (max-width: 1366px) {
+  /*----- Add New Card Button ------*/
+  .add-card-btn {
+    right: 15px;
+    bottom: 15px;
+    padding: 8px 8px;
+  }
+  /* for Transport Main Card */
+  .transport-main-card {
+    padding: 15px;
+    height: 97vh;
+    margin: 10px;
+  }
+
+  /************ Pickup Card Header *************/
+  /* Inside Pickup Card */
+  .pickup-card {
+    padding-bottom: 16px;
+    margin: 10px;
+  }
+  /* Pickup Card Header */
+  .pickup-point-header {
+    padding: 8px 15px;
+  }
+  /* Pickup Header Text */
+  .header-text {
+    font-size: 16px;
+    margin: 1px 0 0.15rem 0;
+  }
+  /* Pickup Header Icon */
+  .header-text i {
+    font-size: 19px;
+  }
+  /* Pickup Edit Content */
+  .pickup-input {
+    width: 24vw !important;
+    height: 30px;
+  }
+  .pickup-input::placeholder {
+    top: -2px;
+    font-size: 13px;
+  }
+  /* Pickup Header Save Button */
+  .pp-save-action {
+    padding: 7px 1.3px;
+    border-radius: 50%;
+  }
+  /* Pickup Header Save Icon */
+  .pp-save-action i {
+    font-size: 14px;
+  }
+  /* Pickup Header Action Button */
+  .pp-action {
+    margin: 0 4px;
+    font-size: 18px;
+  }
+
+  /************ Pickup Card Content *************/
+  /* Pickup Content Text */
+  .pickup-content-header {
+    padding: 0 25px;
+    margin-top: 9px;
+  }
+
+  /* Pickup Content Icon */
+  .pickup-content-text i {
+    font-size: 20px;
+    margin: -0.5px 8px 0 0;
+  }
+
+  /* Pickup Content Text */
+  .pickup-content-text {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 3px 0 0.15rem 0;
+  }
+
+  /************ Pickup Bus Root *************/
+  /* Bus Root Content */
+  .pickup-bus-root {
+    padding: 0px 51px;
+  }
+
+  /* Bus Root Title */
+  .bus-root-title {
+    font-size: 14.3px;
+    letter-spacing: 0.1px;
+    margin: 1px 0 0.1rem 0;
+  }
+
+  /* Bus Root Title Icon */
+  .bus-root-title i {
+    top: 4.5px;
+    font-size: 15.5px;
+  }
+
+  /* Pickup Button */
+  .add-pickup-btn {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 4.5px 9px;
+    margin-left: 0;
+  }
+
+  /* Submit Button */
+  .add-done-btn {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 4px 9px 4.5px 9px;
+    margin: 5px 0 5px 0;
+  }
+
+  /************ Add New Card *************/
+  /* Inside Pickup Card */
+  .add-new-card {
+    padding-bottom: 10px;
+    margin: 10px;
+  }
+  /* Pickup Edit Content */
+  .add-area-input {
+    width: 24vw !important;
+    max-width: 100%;
+    height: 30px;
+    margin: 3px 0 3px 0;
+  }
+
+  /* Add Card Custm Input */
+  .add-area-input::placeholder {
+    top: -2px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* Pickup Edit Content */
+  .pickup-input {
+    width: 35vw !important;
+  }
+  /* Pickup Edit Content */
+  .add-area-input {
+    width: 34vw !important;
+    margin: 2px 0 2px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Pickup Card Header */
+  .pickup-point-header {
+    padding: 10px 15px;
+  }
+  /* Pickup Edit Content */
+  .pickup-input {
+    width: 80vw !important;
+  }
+  /* Pickup Edit Content */
+  .add-area-input {
+    width: 79vw !important;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  /* Pickup Button */
+  .add-pickup-btn {
+    padding: 4.5px 9px;
+  }
+
+  /* Submit Button */
+  .add-done-btn {
+    padding: 3px 9px 4.5px 9px;
+    margin: 4px 0 5px 0;
+  }
+}
