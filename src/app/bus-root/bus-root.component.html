@@ -1,4 +1,4 @@
-<div class="card" style="min-height: 96.5vh; background: rgb(237, 249, 255); margin: 15px;">
+<div class="card" style="min-height: 95%; background: rgb(237, 249, 255); margin: 15px 15px 0 15px;">
   <!------------- Add Create Button ------------>
   <button mat-mini-fab color="primary" class="add-bus-root-btn">
     <i class="material-icons">add</i>
@@ -10,44 +10,100 @@
   <!----- Add Row ----->
   <div class="row m-0">
     <!----- Add Column ----->
-    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [0,1]">
+    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-12 col-sm-12 m-0 p-0" *ngFor="let item of [0,1,2]">
 
       <!------ Inner Card ------>
-      <div class="card bus-root-card">
-        <div class="bus-root-header">
-          <div>
-            <h5> <i class="material-icons">directions_bus</i>105-A</h5>
+      <div class="card pickup-card">
+        <!------------------------ Header Title Content --------------------->
+        <ng-container>
+          <div class="pickup-point-header">
+            <h5 class="pickup-align bus-root-text">
+              <i class="fa fa-bus bus-icon"></i> 105-A (bus no.)
+            </h5>
+            <div class="pickup-align hover-to-show">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch1">
+                <label class="custom-control-label" for="switch1" style="cursor: pointer!important;"></label>
+              </div>
+              <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
+              <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+            </div>
+            <div>
+              <span class="badge badge-default student-badge">56 Students</span>
+            </div>
           </div>
-          <div>
+        </ng-container>
 
+        <!----- Header Edit Mode ----->
+        <!-- <ng-container>
+          <div class="pickup-point-header">
+            <div class="d-flex align-items-center">
+              <i class="fa fa-bus bus-icon"></i>
+              <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
+            </div>
+            <div class="d-flex align-items-center">
+              <button class="pp-save-action">
+                <i class="material-icons pp-action">save</i>
+              </button>
+            </div>
           </div>
-        </div>
+        </ng-container> -->
+
+
+        <!------------------------- Add HR Line ----------------------->
+        <hr class="pickup-Header-Hr">
+
+        <!------------------------- Body Content ----------------------->
+        <ng-container>
+          <div class="bus-root-content">
+            <!------ Time schedule ----->
+            <div class="pickup-align">
+              <p>Departure on : <span>06:30 AM</span></p>
+              <p>Travel Time : <span>01:15 hr</span></p>
+            </div>
+            <!------ Bus Root ARea & Pickup-Point List ------>
+            <div class="bus-root-area-pickup-list" *ngFor="let item of [0,1,2,3]">
+              <i class="material-icons location-icon">pin_drop</i>
+              <div class="bus-root-inside">
+                <div class="w-35">
+                  <p class="bus-root-area">Pitta Raghavendra</p>
+                  <h6 class="bus-root-pickup">Mendipatnam AM</h6>
+                </div>
+                <h6 class="w-5 bus-root-dash">-</h6>
+                <h6 class="w-15 bus-root-time">06:40 AM</h6>
+                <h6 class="w-5 bus-root-dash">-</h6>
+                <h6 class="w-15 bus-root-time">03:10 PM</h6>
+                <div class="w-10">
+                  <span class="badge badge-default student-badge">56</span>
+                  <!-- <h6 class="student-badge">56</h6> -->
+                </div>
+                <!-- <div class="w-10">
+                  <h6 class="pickup-align ">
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                      <label class="custom-control-label" for="customSwitch1"
+                        style="cursor: pointer!important;"></label>
+                    </div>
+                    <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
+                    <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+                  </h6>
+                </div> -->
+              </div>
+            </div>
+
+            <!----- Add Bus Root btn ----->
+            <div class="pickup-align" style="margin: 10px 0 -6px 0!important;">
+              <button class="btn btn-default add-pickup-btn">Add Pickup</button>
+              <p class="mb-0">Reach Time At Gurukul : <span>07:50 AM</span></p>
+            </div>
+          </div>
+        </ng-container>
       </div>
 
     </div>
     <!--********************************************************************************************************************************************
-                                                                    Add New Card
+                                                                      Add New Card
     *********************************************************************************************************************************************-->
   </div>
-
-
-
-
-
-  <!----- Rushabh ----->
-  <!-- <div style="width: 600px; margin: 0 auto;">
-    <div class="valid-record">
-      <div>
-        <p>Valid Records : <span>43</span></p>
-      </div>
-      <div class="invalid-record">
-        <p>Invalid Records : <span>3</span>
-          <a data-toggle="modal" data-target="#exampleModal" class="view-record">
-            <i class="fa fa-eye"></i> View Records</a>
-        </p>
-      </div>
-    </div>
-  </div> -->
-  <!----- End ----->
 
 </div>

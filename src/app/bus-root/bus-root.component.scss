@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
-// font-family: 'Ubuntu', sans-serif;
-
 /*---- Add New Card Button -----*/
 .add-bus-root-btn {
   right: 30px;
@@ -9,70 +7,95 @@
   position: fixed !important;
 }
 
-/***********************************************************************************************************
-                                          Inner Card
-***********************************************************************************************************/
-
-/*---- Bus Root Inner card ----*/
-.bus-root-card {
-  margin: 15px 10px;
-  border: 1px solid #3f51b5;
+/*---- Bus Root Content Size -----*/
+.add-bus-root-btn {
+  right: 30px;
+  bottom: 30px;
+  position: fixed !important;
 }
 
-.bus-root-header {
-  margin: 8px 25px 3px 25px !important;
+/*---- Bus Root Inner card ----*/
+/* Pickup Header Text */
+.bus-root-text {
+  font-size: 19px;
+  font-weight: 400;
+  color: #b4b4b4;
+  letter-spacing: 0.2px;
+  margin: 1px 0 0.1rem 0;
+}
+
+.bus-icon {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ff7979;
+  letter-spacing: 10px;
+  margin: 1px 0 0rem 0;
+}
+
+/*----- Bus Root Content -----*/
+.bus-root-content {
+  margin: 10px 20px;
+}
+
+.pickup-align p {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(184, 184, 184);
+}
+
+.pickup-align p span {
+  font-weight: 500;
+  color: rgb(56, 56, 56);
+}
+
+/*----- Bus Root Area Pickup -----*/
+
+.bus-root-area-pickup-list {
   display: flex;
   align-items: center;
+  min-width: 100%;
+  margin-bottom: 15px;
+}
+.location-icon {
+  color: #04a9f5;
+  font-size: 25px;
+}
+.bus-root-inside {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-left: 10px;
   justify-content: space-between;
 }
 
-.bus-root-header h5 {
-  display: flex;
-  align-items: center;
-  color: #444;
-  // margin: 10px 0 12px 0;
+.bus-root-area {
+  margin-block-end: 0em;
+  line-height: 30px;
+  color: #adadad;
+  font-size: 17px;
 }
 
-.bus-root-header h5 i {
-  margin-right: 10px;
-  color: rgb(255, 152, 152);
+.bus-root-pickup {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.bus-root-dash {
+  text-align: center;
+  font-weight: bold;
+  color: #04a9f5;
+  line-height: 10px;
 }
 
-/*----------------------------
-            rushabh
-----------------------------*/
-// .valid-record {
-//   margin-top: 20px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
+.bus-root-time {
+  line-height: 10px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 17px;
+}
 
-// .valid-record p {
-//   font-size: 18px;
-// }
-
-// .valid-record p span {
-//   font-weight: bold;
-//   color: red;
-// }
-
-// .invalid-record {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .invalid-record p {
-//   font-size: 18px;
-// }
-
-// .invalid-record p span {
-//   font-weight: bold;
-//   color: rgb(0, 177, 0);
-// }
-
-// .invalid-record p a {
-//   margin-left: 10px;
-//   cursor: pointer;
-//   text-decoration: none;
-// }
+.student-badge {
+  background: #ffa800;
+  padding: 6px 10px;
+  color: #fff;
+  border-radius: 50px;
+}

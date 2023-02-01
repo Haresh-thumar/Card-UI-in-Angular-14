@@ -4,7 +4,7 @@ import { BusRootComponent } from './bus-root/bus-root.component';
 import { PickupPointComponent } from './pickup-point/pickup-point.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'bus-root', pathMatch: 'full' },
+  // { path: '', redirectTo: 'bus-root', pathMatch: 'full' },
   { path: 'pickup-point', component: PickupPointComponent },
   { path: 'bus-root', component: BusRootComponent }
 ];
