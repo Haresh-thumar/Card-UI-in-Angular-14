@@ -1,48 +1,39 @@
-<div class="card transport-main-card">
-
-  <!------------- Add Create Button ------------>
-  <button class="btn btn-default add-card-btn">
-    <i class="material-icons">add</i>
-  </button>
-
+<section class="container-fluid">
 
   <!----- Add Row ----->
   <div class="row">
-
-
-    <!--********************************************************************************************************************************************
-                                                                  Complete Show Card
-    *********************************************************************************************************************************************-->
-
+    <!--*************************************************************************************************************
+                                                Complete Show Card
+    **************************************************************************************************************-->
     <!----- Add Column ----->
-    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [1]">
-      <!----- Add Card ----->
+    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [0,1,2]">
       <div class="card pickup-card">
         <!------------------------ Header Title Content --------------------->
         <ng-container>
-          <div class="pickup-point-header">
-            <h5 class="pickup-align header-text">
-              <i class="material-icons">my_location</i> Punjakutta Central... (area)
-            </h5>
-            <div class="pickup-align hover-to-show">
+          <div class="d-flex justify-content-between align-items-center pickup-header-space">
+            <div class="d-flex align-items-center">
+              <h5 class="pickup-h5-text">
+                <i class="material-icons pickup-icon">my_location</i>
+                <b>Panjagutta Road(Area Name)</b>
+              </h5>
+            </div>
+            <div class="d-flex align-items-center hover-to-show">
               <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="switch1">
                 <label class="custom-control-label" for="switch1" style="cursor: pointer!important;"></label>
               </div>
-              <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
-              <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+              <i class="material-icons pickup-action" style="color: #0014CA;">edit</i>
+              <i class="material-icons pickup-action" style="color: #F60000;">delete</i>
             </div>
           </div>
         </ng-container>
-        <!----- Header Edit Mode ----->
+        <!----- Edit Mode ----->
         <!-- <ng-container>
-          <div class="pickup-point-header">
-            <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
-            <div class="pickup-align">
-              <button class="pp-save-action">
-                <i class="material-icons pp-action">save</i>
-              </button>
-            </div>
+          <div class="d-flex justify-content-between align-items-center pickup-header-space">
+            <input type="text" placeholder="enter area name" class="edit-input">
+            <button mat-mini-fab class="save-button">
+              <i class="material-icons">save</i>
+            </button>
           </div>
         </ng-container> -->
 
@@ -50,90 +41,91 @@
         <hr class="pickup-Header-Hr">
 
         <!------------------------- Body Content ----------------------->
-        <ng-container *ngFor="let item of [1,2]">
+        <ng-container *ngFor="let p of [0,1,2]">
           <ng-container>
-            <div class="pickup-content-header">
-              <h5 class="pickup-align pickup-content-text">
-                <i class="material-icons">pin_drop</i> Punjakutta Central... (area)
-              </h5>
-              <div class="pickup-align hover-to-show">
-                <div class="custom-switch">
-                  <input type="checkbox" class="custom-control-input">
-                  <label class="custom-control-label" for="switch2" style="cursor: pointer!important;"></label>
+            <div class="pickup-card-body">
+              <div class="pickup-body-content">
+                <div class="d-flex align-items-center">
+                  <h4 class="pickup-body-text">
+                    <i class="material-icons pickup-icon">pin_drop</i>
+                    <b>Moinabad Road (PP)</b>
+                  </h4>
                 </div>
-                <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
-                <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+                <div class="d-flex align-items-center hover-to-show">
+                  <span>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="switch1">
+                      <label class="custom-control-label" for="switch1" style="cursor: pointer!important;"></label>
+                    </div>
+                  </span>
+                  <i class="material-icons pickup-action" style="color: #0014CA;">edit</i>
+                  <i class="material-icons pickup-action" style="color: #F60000;">delete</i>
+                </div>
               </div>
             </div>
           </ng-container>
-          <!----- Content Edit Mode ----->
+          <!------------ Edit Mode ----------->
           <!-- <ng-container>
-            <div class="pickup-content-header">
-              <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
-              <div class="pickup-align">
-                <button class="pp-save-action">
-                  <i class="material-icons pp-action">save</i>
+            <div class="pickup-card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <input type="text" placeholder="enter pickup-point" class="edit-input">
+                <button mat-mini-fab class="save-button">
+                  <i class="material-icons">save</i>
                 </button>
               </div>
             </div>
           </ng-container> -->
-          <!----- Bus Root Content ----->
-          <div class="pickup-bus-root" *ngFor="let item of [1,2]">
-            <p class="bus-root-title">
-              <i class="material-icons">directions_bus</i> police academy circle... (bus root)
-            </p>
-          </div>
+
+          <!------------- Bus Root ------------>
+          <ng-container *ngFor="let item of [0,1]">
+            <div class="but-root-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="flex-item">
+                  <h6 class="bus-root-text">
+                    <i class="material-icons bus-root-icon">directions_bus</i>
+                    <b>Bus root name (Bus Root)</b>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </ng-container>
         </ng-container>
-        <div class="pickup-content-header">
-          <button class="btn btn-default add-pickup-btn">Add Pickup</button>
+
+        <!------------ Add Pickup-Point Button ----------->
+        <div class="d-flex align-items-center justify-content-between pickup-btn-group">
+          <button mat-raised-button class="add-pickup-btn">Add Pickup</button>
         </div>
       </div>
     </div>
 
 
-    <!--********************************************************************************************************************************************
-                                                                    Add New Card
-    *********************************************************************************************************************************************-->
+
+    <!--*************************************************************************************************************
+                                                Complete Show Card
+  **************************************************************************************************************-->
     <!----- Add Column ----->
     <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [1]">
-      <!----- Add Card ----->
-      <div class="card add-new-card">
-        <!------------------------ Header Title Content --------------------->
-        <ng-container>
-          <div class="pickup-point-header">
-            <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
-            <div class="pickup-align">
-              <i class="material-icons pp-action" style="color: #F60000;">delete</i>
-            </div>
-          </div>
-        </ng-container>
+      <div class="card pickup-card">
+        <!-------- Area Header ------->
+        <h5 class="add-area-title">Add Area</h5>
 
         <!----- Add HR Line ----->
         <hr class="pickup-Header-Hr">
 
-        <!------------------------- Body Content ----------------------->
-        <ng-container *ngFor="let item of [1,2]">
-          <!----- Content Edit Mode ----->
-          <ng-container>
-            <div class="pickup-content-header">
-              <input type="password" class="form-control add-area-input" placeholder="Enter Pickup-Point Name">
-              <div class="pickup-align">
-                <i class="material-icons pp-action" style="color: #F60000;">delete</i>
-              </div>
+        <!--------- Add Area UI -------->
+        <ng-container>
+          <div class="new-pickup-card-body">
+            <!------ Add Area Input ------>
+            <div class="form-group">
+              <input type="text" class="form-control new-area-input" placeholder="Enter Area Name">
             </div>
-          </ng-container>
-          <!----- Bus Root Content ----->
-          <ng-template class="pickup-bus-root" *ngFor="let item of [1,2]">
-            <p class="bus-root-title">
-              <i class="material-icons">directions_bus</i> police academy circle... (bus root)
-            </p>
-          </ng-template>
+            <!------ Add Area Button ------>
+            <div class="d-flex align-items-center justify-content-center">
+              <button mat-raised-button class="submit-pickup-btn">Add Area</button>
+            </div>
+          </div>
         </ng-container>
-        <div class="pickup-content-header">
-          <button class="btn btn-default add-pickup-btn">Add Pickup</button>
-          <button class="btn btn-default add-done-btn">Done</button>
-        </div>
       </div>
     </div>
-
   </div>
+</section>
