@@ -29,30 +29,29 @@ export class PickupPointComponent implements OnInit {
     { id: '7bd68v486464dv648d6v', startTime: '2015-01-01T06:00:00.000Z', endTime: '2015-01-01T08:00:00.000Z', differentTime: '' },
   ];
 
+
+
   /*--------- Using Object Value to Get Two Timezone Difference Complete Working Method ----------*/
   getdiff() {
     console.clear();
     for (let getTime of this.busRouteObj) {
-
       let busStartTime = getTime.startTime;
       let busEndTime = getTime.endTime;
-
       let startTime = moment(busStartTime);
       let endTime = moment(busEndTime);
 
       /*---- Getting the difference: hours (h), minutes (m) and seconds (s) ----*/
       let hour = endTime.diff(startTime, 'hours');
       let min = endTime.diff(startTime, 'minutes') - (60 * hour);
-
       /*---- Formating in hh:mm:ss (appends a left zero when num < 10) ----*/
       let hh = ('0' + hour).slice(-2);
       let mm = ('0' + min).slice(-2);
 
       let finalHour = +hh > 0 ? hh + " hr" : "";
       let finalMin = mm > '00' ? mm + " min" : "";
-      console.log(`${finalHour} ${finalMin}`);
-
+      getTime.differentTime = `${finalHour} ${finalMin}`
     }
+    return this.busRouteObj;
   }
 
 
