@@ -1,0 +1,78 @@
+/****************************************************************************
+                          Custom Mat-select Datepicker
+****************************************************************************/
+.mat-main-select {
+  margin: 10px 0;
+}
+.mat-select-input {
+  margin: 0 auto;
+  width: 90%;
+}
+::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.4em 0px !important;
+}
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+::ng-deep.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(0.75);
+  width: 133.33333%;
+}
+::ng-deep.mat-form-field-flex:hover .mat-form-field-outline {
+  opacity: 0.1 !important;
+}
+.datepicker-icon {
+  top: -8px;
+  right: -4px;
+  font-size: 17px;
+  color: #000;
+  position: relative;
+}
+::ng-deep .mat-pseudo-checkbox {
+  color: #00a9a6;
+}
+::ng-deep .mat-primary .mat-pseudo-checkbox-checked,
+.mat-primary .mat-pseudo-checkbox-indeterminate {
+  background: #00a9a6;
+}
+
+/****************************************************************************
+                  ng Date Time picker (owl DateTime Picker)
+****************************************************************************/
+.input-with-icon {
+  position: relative;
+  width: 30%;
+  box-sizing: border-box;
+}
+.input-with-icon .bus-picktime {
+  width: 100%;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 12.5px !important;
+  background: transparent !important;
+  border: 1px solid rgb(219, 219, 219);
+  text-indent: -62px;
+}
+.bus-picktime:focus {
+  border: 1px solid #69cfff !important;
+  box-shadow: none;
+}
+.bus-picktime::placeholder {
+  color: rgb(168, 168, 168);
+  font-size: 13px !important;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  padding: 0 0 3px 7px;
+  text-indent: 0px;
+}
+.input-with-icon .icon {
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}

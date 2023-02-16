@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,12 +13,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { GetTimezoneDiffComponent } from './get-timezone-diff/get-timezone-diff.component';
+import { MatCustomElementComponent } from './mat-custom-element/mat-custom-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PickupPointComponent,
-    BusRootComponent
+    BusRootComponent,
+    GetTimezoneDiffComponent,
+    MatCustomElementComponent
   ],
   imports: [
     BrowserModule,
@@ -30,10 +34,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatInputModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA],
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
