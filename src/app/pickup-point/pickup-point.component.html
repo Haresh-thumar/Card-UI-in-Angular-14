@@ -1,12 +1,17 @@
 <section class="container-fluid">
 
+  <!------------- Add Create Button ------------>
+  <!-- <button mat-mini-fab color="primary" class="main-add-btn">
+    <i class="material-icons">add</i>
+  </button> -->
+
   <!----- Add Row ----->
   <div class="row">
     <!--*************************************************************************************************************
                                                 Complete Show Card
-    **************************************************************************************************************-->
+  **************************************************************************************************************-->
     <!----- Add Column ----->
-    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [0,1,2]">
+    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [0,1,2,3]">
       <div class="card pickup-card">
         <!------------------------ Header Title Content --------------------->
         <ng-container>
@@ -18,10 +23,12 @@
               </h5>
             </div>
             <div class="d-flex align-items-center hover-to-show">
-              <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="switch1">
-                <label class="custom-control-label" for="switch1" style="cursor: pointer!important;"></label>
-              </div>
+              <span>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="switch1">
+                  <label class="custom-control-label" for="switch1" style="cursor: pointer!important;"></label>
+                </div>
+              </span>
               <i class="material-icons pickup-action" style="color: #0014CA;">edit</i>
               <i class="material-icons pickup-action" style="color: #F60000;">delete</i>
             </div>
@@ -106,6 +113,49 @@
     <!----- Add Column ----->
     <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [1]">
       <div class="card pickup-card">
+        <!------------------------ Header Title Content --------------------->
+        <ng-container>
+          <div class="d-flex justify-content-between align-items-center pickup-header-space">
+            <div class="flex-item">
+              <input type="text" placeholder="enter area name" class="edit-input">
+            </div>
+            <div class="flex-item d-flex align-items-center">
+              <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+            </div>
+          </div>
+        </ng-container>
+
+        <!----- Add HR Line ----->
+        <hr class="pickup-Header-Hr">
+
+        <!------------------------- Body Content ----------------------->
+        <ng-container *ngFor="let item of [0,1,2]">
+          <div class="pickup-card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <input type="text" placeholder="enter pickup-point" class="edit-input">
+              <div>
+                <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+
+        <!------------ Add Pickup-Point Button ----------->
+        <div class="d-flex align-items-center justify-content-between pickup-btn-group">
+          <button mat-raised-button class="add-pickup-btn">Add Pickup</button>
+          <button mat-raised-button class="submit-pickup-btn">Add</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!--*************************************************************************************************************
+                                                Complete Show Card
+  **************************************************************************************************************-->
+    <!----- Add Column ----->
+    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 m-0 p-0" *ngFor="let item of [1]">
+      <div class="card pickup-card">
         <!-------- Area Header ------->
         <h5 class="add-area-title">Add Area</h5>
 
@@ -127,5 +177,6 @@
         </ng-container>
       </div>
     </div>
+
   </div>
 </section>

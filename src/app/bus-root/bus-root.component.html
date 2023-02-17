@@ -1,109 +1,390 @@
-<div class="card" style="min-height: 95%; background: rgb(237, 249, 255); margin: 15px 15px 0 15px;">
-  <!------------- Add Create Button ------------>
-  <button mat-mini-fab color="primary" class="add-bus-root-btn">
-    <i class="material-icons">add</i>
-  </button>
+<section class="pcoded-content">
 
-  <!--********************************************************************************************************************************************
-                                                                Complete Show Card
-  *********************************************************************************************************************************************-->
-  <!----- Add Row ----->
-  <div class="row m-0">
-    <!----- Add Column ----->
-    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-12 col-sm-12 m-0 p-0" *ngFor="let item of [0,1,2]">
-
-      <!------ Inner Card ------>
-      <div class="card pickup-card">
-        <!------------------------ Header Title Content --------------------->
-        <ng-container>
-          <div class="pickup-point-header">
-            <h5 class="pickup-align bus-root-text">
-              <i class="fa fa-bus bus-icon"></i> 105-A (bus no.)
-            </h5>
-            <div class="pickup-align hover-to-show">
+  <!------- card Row ------->
+  <div class="transport-row">
+    <!--******************* main card ********************-->
+    <div class="pickup-card cards">
+      <!---------- Bus Root Header ---------->
+      <ng-container>
+        <div class="bus-root-header">
+          <h5 class="bus-root-h5-text">
+            <i class="fa fa-bus"></i>
+            <strong>105-A (Bus Name)</strong>
+          </h5>
+          <div class="hover-badge-show">
+            <span class="badge badge-warning student-badge">78 Students</span>
+          </div>
+          <div class="d-flex align-items-center hover-action-show">
+            <span>
               <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="switch1">
                 <label class="custom-control-label" for="switch1" style="cursor: pointer!important;"></label>
               </div>
-              <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
-              <i class="material-icons pp-action" style="color: #F60000;">delete</i>
+            </span>
+            <i class="material-icons pickup-action" style="color: #0014CA;">edit</i>
+            <i class="material-icons pickup-action" style="color: #F60000;">delete</i>
+          </div>
+        </div>
+      </ng-container>
+      <!----- Bus Root Header Edit ----->
+      <ng-container>
+        <div class="bus-root-header">
+          <div class="d-flex w-100 align-items-center">
+            <div style="width: 7%;">
+              <i class="fa fa-bus bus-icon"></i>
             </div>
+            <div style="width: 70%;">
+              <input type="text" class="form-control form-control-sm header-edit-input" placeholder="Enter Bus Number">
+            </div>
+            <div style="width: 23%; display: flex; justify-content: end;">
+              <button class="pp-cancle-action">
+                <i class="fa fa-reply"></i>
+              </button>
+              <button class="pp-save-action">
+                <i class="material-icons">save</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+
+      <!----------- Custom HR Line ----------->
+      <hr class="pickup-Header-Hr">
+
+
+      <!---------- Bus Root Body Start ---------->
+      <ng-container>
+        <div class="bus-root-body">
+          <!----- Depature Time & Travel Time Section ----->
+          <div class="d-flex align-items-center justify-content-between">
             <div>
-              <span class="badge badge-default student-badge">56 Students</span>
+              <p class="departure-time">Departure on : <strong>06:30 AM</strong>
+                <i class="material-icons time-edit-icon">edit</i>
+              </p>
+            </div>
+            <!----- Depature Time Edit ----->
+            <!-- <p class="departure-time d-flex">Departure on :
+              <strong>
+                <input type="time" class="edit-timepicker" style="margin: -5px 0 0 5px;">
+              </strong>
+            </p> -->
+            <p class="departure-time">Travel Time : <strong>01:15 hr</strong></p>
+          </div>
+
+          <!----- Area, Pickup-Poin, Time & Student Badge Section Start ----->
+          <ul class="root-list-ul">
+            <!------------- Pickup-Point List ----------->
+            <ng-container *ngFor="let item of [0,1,2,3]; let i=index">
+              <li class="pickup-list">
+                <div class="w-5">
+                  <i class="material-icons location">pin_drop</i>
+                </div>
+                <div class="w-30">
+                  <p>Pitta Ragavendra</p>
+                  <h5>Mendipatnam...</h5>
+                </div>
+                <div class="w-10">
+                  <h5 class="list-hifund">-</h5>
+                </div>
+                <div class="w-15">
+                  <h6>08:00 AM</h6>
+                </div>
+                <div class="w-10">
+                  <h5 class="list-hifund">-</h5>
+                </div>
+                <div class="w-15">
+                  <h6>03:40 PM</h6>
+                </div>
+                <div class="w-15 show-badge mx-auto">
+                  <div class="badge student-badge">25</div>
+                </div>
+                <div class="w-15 d-flex ml-auto show-action align-items-center">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="{{i}}">
+                    <label class="custom-control-label" for="{{i}}" style="cursor: pointer!important;"></label>
+                  </div>
+                  <i class="material-icons pickup-action" style="color: #0014CA;">edit</i>
+                  <i class="material-icons pickup-action" style="color: #F60000;">delete</i>
+                </div>
+              </li>
+            </ng-container>
+
+            <!--------------- Bus Root Edit Mode --------------->
+            <!-- <ng-container>
+              <li class="d-flex jusfy-content-between" style="width:auto;">
+                <div class="w-5">
+                  <i class="material-icons location">pin_drop</i>
+                </div>
+                <div class="w-30">
+                  <select class="form-control form-control-sm w-100 mb-2 aws">
+                    <option selected disabled>Select Area</option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>three</option>
+                  </select>
+                  <select class="form-control form-control-sm aws">
+                    <option selected disabled>Select Pickup-Point</option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>three</option>
+                  </select>
+                </div>
+                <div class="w-10">
+                  <h5 class="list-hifund edit-dash">-</h5>
+                </div>
+                <div class="w-15">
+                  <label class="time-lable">Pickup Time</label>
+                  <input type="time" class="edit-timepicker">
+                </div>
+                <div class="w-10">
+                  <h5 class="list-hifund edit-dash">-</h5>
+                </div>
+                <div class="w-15">
+                  <label class="time-lable">Drop Time</label>
+                  <input type="time" class="edit-timepicker">
+                </div>
+                <div class="w-15 d-flex">
+                  <button class="pp-cancle-action ml-auto">
+                    <i class="fa fa-reply"></i>
+                  </button>
+                  <button class="pp-save-action ml-auto">
+                    <i class="material-icons">save</i>
+                  </button>
+                </div>
+              </li>
+            </ng-container> -->
+          </ul>
+          <!---- Reach Time Edit ----->
+          <div class="d-flex align-items-center justify-content-between">
+            <button mat-flat-button class="add-pickup-btn">Add Pickup Point</button>
+            <div>
+              <p class="departure-time align-items-center my-auto">Reach at Gurukul : <strong>08:15 AM</strong>
+                <i class="material-icons time-edit-icon">edit</i>
+              </p>
+            </div>
+            <!----- Depature Time Edit ----->
+            <!-- <p class="departure-time d-flex">Departure on :
+              <strong>
+                <input type="time" class="edit-timepicker" style="margin: -5px 0 0 5px;">
+              </strong>
+            </p> -->
+          </div>
+        </div>
+      </ng-container>
+      <!---------- Bus Root Body End ---------->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="custom-column" *ngFor="let a of [1]">
+      <div class="pickup-card cards">
+        <!----- Bus Root Header Edit ----->
+        <ng-container>
+          <div class="bus-root-header">
+            <div class="d-flex w-100 align-items-center">
+              <div style="width: 7%;">
+                <i class="fa fa-bus bus-icon"></i>
+              </div>
+              <div style="width: 70%;">
+                <input type="text" class="form-control form-control-sm header-edit-input"
+                  placeholder="Enter Bus Number">
+              </div>
+              <div style="width: 23%; display: flex; justify-content: end;">
+                <button class="pp-cancle-action">
+                  <i class="fa fa-reply"></i>
+                </button>
+                <button class="pp-save-action">
+                  <i class="material-icons">save</i>
+                </button>
+              </div>
             </div>
           </div>
         </ng-container>
 
-        <!----- Header Edit Mode ----->
-        <!-- <ng-container>
-          <div class="pickup-point-header">
-            <div class="d-flex align-items-center">
-              <i class="fa fa-bus bus-icon"></i>
-              <input type="password" class="form-control pickup-input" placeholder="Enter Area Name">
-            </div>
-            <div class="d-flex align-items-center">
-              <button class="pp-save-action">
-                <i class="material-icons pp-action">save</i>
-              </button>
-            </div>
-          </div>
-        </ng-container> -->
-
-
-        <!------------------------- Add HR Line ----------------------->
+        <!----------- Custom HR Line ----------->
         <hr class="pickup-Header-Hr">
 
-        <!------------------------- Body Content ----------------------->
         <ng-container>
-          <div class="bus-root-content">
-            <!------ Time schedule ----->
-            <div class="pickup-align">
-              <p>Departure on : <span>06:30 AM</span></p>
-              <p>Travel Time : <span>01:15 hr</span></p>
-            </div>
-            <!------ Bus Root ARea & Pickup-Point List ------>
-            <div class="bus-root-area-pickup-list" *ngFor="let item of [0,1,2,3]">
-              <i class="material-icons location-icon">pin_drop</i>
-              <div class="bus-root-inside">
-                <div class="w-35">
-                  <p class="bus-root-area">Pitta Raghavendra</p>
-                  <h6 class="bus-root-pickup">Mendipatnam AM</h6>
-                </div>
-                <h6 class="w-5 bus-root-dash">-</h6>
-                <h6 class="w-15 bus-root-time">06:40 AM</h6>
-                <h6 class="w-5 bus-root-dash">-</h6>
-                <h6 class="w-15 bus-root-time">03:10 PM</h6>
-                <div class="w-10">
-                  <span class="badge badge-default student-badge">56</span>
-                  <!-- <h6 class="student-badge">56</h6> -->
-                </div>
-                <!-- <div class="w-10">
-                  <h6 class="pickup-align ">
-                    <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                      <label class="custom-control-label" for="customSwitch1"
-                        style="cursor: pointer!important;"></label>
-                    </div>
-                    <i class="material-icons pp-action" style="color: #0014CA;">edit</i>
-                    <i class="material-icons pp-action" style="color: #F60000;">delete</i>
-                  </h6>
-                </div> -->
-              </div>
+          <div class="bus-root-body">
+            <!----- Depature Time & Travel Time Section ----->
+            <div class="d-flex align-items-center justify-content-between">
+              <!-- <div>
+                <p class="departure-time">Departure on : <strong>06:30 AM</strong>
+                  <i class="material-icons time-edit-icon">edit</i>
+                </p>
+              </div> -->
+              <!----- Depature Time Edit ----->
+              <p class="departure-time d-flex">Departure on :
+                <strong>
+                  <input type="time" class="edit-timepicker" style="margin: -5px 0 0 5px;">
+                </strong>
+              </p>
+              <p class="departure-time">Travel Time : <strong>01:15 hr</strong></p>
             </div>
 
-            <!----- Add Bus Root btn ----->
-            <div class="pickup-align" style="margin: 10px 0 -6px 0!important;">
-              <button class="btn btn-default add-pickup-btn">Add Pickup</button>
-              <p class="mb-0">Reach Time At Gurukul : <span>07:50 AM</span></p>
+            <!------ Add Pickup-Point Time ------->
+            <div class="d-flex align-items-center justify-content-between">
+              <button mat-flat-button class="add-pickup-btn">Add Pickup Point</button>
+              <p class="departure-time align-items-center my-auto d-flex">Reach at Gurukul :
+                <strong>
+                  <input type="time" class="edit-timepicker" style="margin: 0 0 0 5px;">
+                </strong>
+              </p>
             </div>
           </div>
         </ng-container>
       </div>
-
     </div>
-    <!--********************************************************************************************************************************************
-                                                                      Add New Card
-    *********************************************************************************************************************************************-->
-  </div>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="custom-column" *ngFor="let a of [1]">
+      <div class="pickup-card cards">
+        <ng-container>
+          <!---------- Bus Root Header ---------->
+          <div class="bus-root-header">
+            <h5 class="bus-root-h5-text">
+              <i class="fa fa-bus"></i>
+              <strong>105-A (Bus Name)</strong>
+            </h5>
+            <div>
+              <!-- class="hover-badge-show" -->
+              <span class="badge badge-warning student-badge">78 Students</span>
+            </div>
+            <!-- <div class="d-flex align-items-center hover-action-show">
+                      <span>
+                          <div class="custom-control custom-switch">
+                              <input type="checkbox" class="custom-control-input" id="switch1">
+                              <label class="custom-control-label" for="switch1"
+                                  style="cursor: pointer!important;"></label>
+                          </div>
+                      </span>
+                      <i class="material-icons pickup-action" style="color: #0014CA;">edit</i>
+                      <i class="material-icons pickup-action" style="color: #F60000;">delete</i>
+                  </div> -->
+          </div>
+        </ng-container>
+
+        <!----------- Custom HR Line ----------->
+        <hr class="pickup-Header-Hr">
+
+        <ng-container>
+          <div class="bus-root-body">
+            <!----- Depature Time & Travel Time Section ----->
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <p class="departure-time">Departure on : <strong>06:30 AM</strong>
+                  <i class="material-icons time-edit-icon">edit</i>
+                </p>
+              </div>
+              <!----- Depature Time Edit ----->
+              <!-- <p class="departure-time d-flex">Departure on :
+                <strong>
+                  <input type="time" class="edit-timepicker" style="margin: -5px 0 0 5px;">
+                </strong>
+              </p> -->
+              <p class="departure-time">Travel Time : <strong>01:15 hr</strong></p>
+            </div>
+
+            <ul class="root-list-ul">
+              <!------------- Pickup-Point List ----------->
+              <ng-container *ngFor="let item of [1]; let i=index">
+                <li class="pickup-list">
+                  <div class="w-5">
+                    <i class="material-icons location">pin_drop</i>
+                  </div>
+                  <div class="w-30">
+                    <select class="form-control form-control-sm w-100 mb-2 aws">
+                      <option selected disabled>Select Area</option>
+                      <option>One</option>
+                      <option>Two</option>
+                      <option>three</option>
+                    </select>
+
+                    <select class="form-control form-control-sm aws">
+                      <option selected disabled>Select Pickup-Point</option>
+                      <option>One</option>
+                      <option>Two</option>
+                      <option>three</option>
+                    </select>
+                  </div>
+                  <div class="w-10 mx-auto">
+                    <h5 class="list-hifund edit-dash">-</h5>
+                  </div>
+                  <div class="w-15">
+                    <label class="time-lable">Pickup Time</label>
+                    <input type="time" class="edit-timepicker">
+                  </div>
+                  <div class="w-10">
+                    <h5 class="list-hifund edit-dash">-</h5>
+                  </div>
+                  <div class="w-15">
+                    <label class="time-lable">Drop Time</label>
+                    <input type="time" class="edit-timepicker">
+                  </div>
+                  <div class="w-15 d-flex justify-content-end">
+                    <button class="pp-cancle-action">
+                      <i class="fa fa-reply"></i>
+                    </button>
+                    <button class="pp-save-action">
+                      <i class="material-icons">save</i>
+                    </button>
+                  </div>
+                  <!-- <div class="w-15 d-flex ml-auto bg-warning show-action align-items-center">
+                                  <div class="custom-control custom-switch bg-success">
+                                      <input type="checkbox" class="custom-control-input" id="{{i}}">
+                                      <label class="custom-control-label" for="{{i}}"
+                                          style="cursor: pointer!important;"></label>
+                                  </div>
+                                  <i class="material-icons pickup-action" style="color: #0014CA;">edit</i>
+                                  <i class="material-icons pickup-action" style="color: #F60000;">delete</i>
+                              </div> -->
+                </li>
+              </ng-container>
+            </ul>
+            <!---- Reach Time Edit ----->
+            <div class="d-flex align-items-center justify-content-between">
+              <button mat-flat-button class="add-pickup-btn">Add Pickup Point</button>
+              <div>
+                <p class="departure-time align-items-center my-auto">Reach at Gurukul : <strong>08:15 AM</strong>
+                  <i class="material-icons time-edit-icon">edit</i>
+                </p>
+              </div>
+              <!----- Depature Time Edit ----->
+              <!-- <p class="departure-time d-flex">Departure on :
+                <strong>
+                  <input type="time" class="edit-timepicker" style="margin: -5px 0 0 5px;">
+                </strong>
+              </p> -->
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</section>

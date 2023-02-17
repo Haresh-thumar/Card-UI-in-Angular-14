@@ -1,7 +1,10 @@
 <section class="container">
+
+  <!-----------------------------------------------------------------------------------------
+                        Time Difference Between Two toISOString TimeZone
+  ------------------------------------------------------------------------------------------>
   <h2 class="mb-0 font-weight-bold mt-5 ml-4 mb-4 text-center text-danger">Time Difference Between Two toISOString
     TimeZone</h2>
-
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -16,8 +19,46 @@
         <td>{{item.id}}</td>
         <td>{{item.startTime}}</td>
         <td>{{item.endTime}}</td>
-        <td>{{item.differentTime}}</td>
+        <td>
+          <h5 class="badge badge-success">{{item.differentTime}}</h5>
+        </td>
       </tr>
     </tbody>
   </table>
+
+
+
+  <!-----------------------------------------------------------------------------------------
+                                  Sum (total) Nested Array Value
+  ------------------------------------------------------------------------------------------>
+  <h2 class="mb-0 font-weight-bold mt-5 ml-4 mb-4 text-center text-danger">Sum (total) Nested Array Value</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">StartTime</th>
+        <th scope="col">EndTime</th>
+        <th scope="col">Different Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!------ Outer Loop ------>
+      <tr *ngFor="let buses of sumNestedObject">
+        <td class="text-info">{{buses.busId}}</td>
+        <td class="text-info">{{buses.name}}</td>
+        <td>
+          <!------ Inner Loop ------>
+      <tr *ngFor="let pickPoint of buses.pickPoints">
+        <td class="text-dark px-5">{{pickPoint.pickPoinId}}</td>
+        <td class="text-success font-weight-bold pr-5">{{pickPoint.areaName}}</td>
+        <td class="text-danger font-weight-bold pr-5">{{pickPoint.studentLength}}</td>
+      </tr>
+      </td>
+      <td>
+        <h5 class="badge badge-warning px-2">{{buses.totalStudentCount + ' ' + 'student'}}</h5>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+
 </section>

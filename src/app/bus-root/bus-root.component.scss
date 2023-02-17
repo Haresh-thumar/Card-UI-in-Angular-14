@@ -1,101 +1,602 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://foadd-dateinput-text.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
-/*---- Add New Card Button -----*/
-.add-bus-root-btn {
-  right: 30px;
-  bottom: 30px;
-  position: fixed !important;
+.pcoded-content {
+  padding: 0 0 !important;
 }
 
-/*---- Bus Root Content Size -----*/
-.add-bus-root-btn {
-  right: 30px;
-  bottom: 30px;
-  position: fixed !important;
+/****** Custom Row & Column ******/
+.transport-row {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
 }
-
-/*---- Bus Root Inner card ----*/
-/* Pickup Header Text */
-.bus-root-text {
-  font-size: 19px;
-  font-weight: 400;
-  color: #b4b4b4;
-  letter-spacing: 0.2px;
-  margin: 1px 0 0.1rem 0;
-}
-
-.bus-icon {
-  font-size: 20px;
-  font-weight: 400;
-  color: #ff7979;
-  letter-spacing: 10px;
-  margin: 1px 0 0rem 0;
-}
-
-/*----- Bus Root Content -----*/
-.bus-root-content {
-  margin: 10px 20px;
-}
-
-.pickup-align p {
-  font-size: 17px;
-  font-weight: 400;
-  color: rgb(184, 184, 184);
-}
-
-.pickup-align p span {
-  font-weight: 500;
-  color: rgb(56, 56, 56);
-}
-
-/*----- Bus Root Area Pickup -----*/
-
-.bus-root-area-pickup-list {
+/************************************************************************************
+                                Card Header Section
+************************************************************************************/
+/****** Bus Root Card Main Header ******/
+.bus-root-header {
+  padding: 7px 15px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  min-width: 100%;
-  margin-bottom: 15px;
-}
-.location-icon {
-  color: #04a9f5;
-  font-size: 25px;
-}
-.bus-root-inside {
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  margin-left: 10px;
   justify-content: space-between;
 }
-
-.bus-root-area {
-  margin-block-end: 0em;
-  line-height: 30px;
+.bus-root-h5-text {
+  font-size: 16px !important;
   color: #adadad;
-  font-size: 17px;
+  padding: 5px 0;
+  font-family: "Ubuntu", sans-serif !important;
+  transition: all 0.5s ease-in-out;
+}
+::ng-deep.mat-typography h5 {
+  margin: 0 0 0 !important;
+}
+.bus-root-h5-text i {
+  font-size: 18px;
+  color: #ff7979;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.bus-root-h5-text strong {
+  font-weight: 300 !important;
+  padding-left: 7px !important;
+  transition: all 0.5s ease-in-out;
 }
 
-.bus-root-pickup {
-  margin-bottom: 0;
-  font-size: 20px;
-}
-.bus-root-dash {
-  text-align: center;
-  font-weight: bold;
-  color: #04a9f5;
-  line-height: 10px;
-}
-
-.bus-root-time {
-  line-height: 10px;
-  font-weight: 500;
-  text-align: center;
-  font-size: 17px;
-}
-
+/******* Student Total Badge *******/
 .student-badge {
+  padding: 8px 12px;
   background: #ffa800;
-  padding: 6px 10px;
+  font-size: 13px;
   color: #fff;
+  font-weight: 400;
   border-radius: 50px;
+  letter-spacing: 0.2px;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+/****** Bus Root Action ******/
+.pickup-action {
+  margin: 0 0 0 4px !important;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/***** Badge Classe ******/
+.hover-badge-show {
+  display: flex;
+}
+
+/***** Action Btn Classe ******/
+.hover-action-show {
+  display: none !important;
+}
+
+/****** Show & Hide Class ******/
+.bus-root-header:hover .hover-badge-show {
+  display: none;
+}
+
+.bus-root-header:hover .hover-action-show {
+  display: flex !important;
+}
+
+/****** Bus Edit ******/
+.header-edit-input {
+  width: 100%;
+}
+.header-edit-input:focus {
+  box-shadow: none;
+  border: 1px solid #69cfff;
+}
+
+/****** Bus Icon ******/
+.bus-icon {
+  color: #ff7979;
+  font-size: 18px;
+  margin: 0 10px 0 0;
+}
+
+.custom-switch .custom-control-label::after {
+  top: calc(0.27rem + 2px) !important;
+  left: calc(-2.25rem + 2px) !important;
+  width: calc(0.95rem - 4px) !important;
+  height: calc(0.95rem - 4px) !important;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none !important;
+}
+
+.custom-control-label {
+  margin-right: -10px !important;
+}
+
+/************************************************************************************
+                                  Card Body Section
+************************************************************************************/
+/****** Bus Root Body ******/
+.bus-root-body {
+  padding: 10px 15px 15px 15px;
+}
+
+/****** root-list-ul *******/
+.root-list-ul {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.root-list-ul li {
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center !important;
+}
+
+.pickup-list {
+  display: flex;
+  margin-top: 3px;
+  justify-content: space-around;
+}
+
+/*---- Custom Width for Element ----*/
+.w-5 {
+  width: 6.5%;
+}
+
+.w-10 {
+  width: 6.5%;
+  margin: 0 auto;
+  align-self: flex-end;
+  text-align: center !important;
+}
+
+.w-15 {
+  width: 18.5%;
+  align-self: flex-end;
+  margin: 0 auto;
+  text-align: center !important;
+}
+
+.w-30 {
+  width: 28.5%;
+}
+
+/*---- Bus Root Typography ----*/
+.root-list-ul li .location {
+  font-size: 24px;
+  color: #04a9f5;
+}
+
+.root-list-ul li p {
+  font-size: 14px;
+  color: #adadad;
+  margin-bottom: 3px;
+  letter-spacing: 0.1px;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+.list-hifund {
+  padding: 0 10px;
+  color: #04a9f5 !important;
+}
+
+.root-list-ul li h5 {
+  font-size: 18.5px !important;
+  color: #000000;
+  margin-bottom: 0;
+  font-weight: 500;
+  letter-spacing: 0px !important;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+.root-list-ul li h6 {
+  font-size: 15.5px !important;
+  color: #000000;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+.edit-dash {
+  top: -6px;
+  position: relative;
+}
+
+/****** Departure Time ******/
+.departure-time {
+  font-size: 15px;
+  font-weight: 400 !important;
+  display: flex;
+  color: rgb(134, 134, 134);
+  font-family: "Ubuntu", sans-serif !important;
+}
+.departure-time strong {
+  font-weight: 500 !important;
+  color: rgb(73, 73, 73);
+}
+.time-edit-icon {
+  font-size: 17px;
+  color: #0091d4;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+  left: 5px;
+  display: none;
+}
+.departure-time:hover .time-edit-icon {
+  display: flex !important;
+}
+.time-lable {
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  float: left;
+}
+
+.aws.form-control:not([size]):not([multiple]),
+.aws.form-control-sm:not([size]):not([multiple]) {
+  padding: 2px 12px 0 4px !important;
+  font-size: 13px;
+  background: #fff;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  padding-right: 3px !important;
+  margin: 0;
+  font-size: 14px;
+  padding-inline-start: 0.2px !important;
+}
+
+.form-control:focus {
+  border: 1px solid #69cfff !important;
+  box-shadow: none;
+}
+
+/*--- Hide/Show Content on Hover ---*/
+.show-action {
+  display: none !important;
+}
+
+.pickup-list:hover .show-action {
+  display: flex !important;
+}
+
+.pickup-list:hover .show-badge {
+  display: none !important;
+}
+
+.edit-timepicker {
+  width: 100%;
+  border-radius: 4px;
+  padding: 3px 1px !important;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+.edit-timepicker:focus {
+  text-shadow: none;
+  border: 1px solid #69cfff;
+}
+
+input[type="time"] {
+  font-size: 11.5px !important;
+}
+
+/*********** Pickup Header Save Button ***********/
+.pp-save-action {
+  padding: 6px 3px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #04a9f5;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.pp-cancle-action {
+  padding: 6px 4px;
+  border-radius: 50%;
+  border: 0;
+  margin-right: 10px;
+  color: #fff !important;
+  background-color: #f50404;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.pp-save-action i {
+  font-size: 17px;
+  margin: 0 3px;
+  color: #fff !important;
+  cursor: pointer;
+}
+.pp-cancle-action i {
+  font-size: 15px;
+  margin: 0 3px;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+/********************** Media Query ************************/
+@media screen and (max-width: 1600px) {
+  .transport-row {
+    grid-template-columns: repeat(2, 50%);
+  }
+  .header-edit-input {
+    margin: 0 10px !important;
+  }
+  .bus-root-h5-text {
+    font-size: 18px !important;
+  }
+  .bus-root-h5-text i {
+    font-size: 18px;
+  }
+  .student-badge {
+    padding: 7px 10px;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .bus-icon {
+    font-size: 17px;
+  }
+  .pp-save-action {
+    padding: 6px 4px;
+  }
+  .pp-cancle-action {
+    padding: 2px 5px;
+    margin-right: 10px;
+  }
+  .pp-save-action i {
+    font-size: 15px;
+    margin: 0 2px;
+  }
+  .pp-cancle-action i {
+    font-size: 13px;
+    margin: 0 2px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bus-root-header {
+    padding: 7px 12px;
+  }
+  .bus-root-h5-text {
+    font-size: 16px !important;
+  }
+  .bus-root-h5-text i {
+    font-size: 17px;
+  }
+  .student-badge {
+    padding: 6px 9px;
+    font-size: 12px;
+  }
+  .pp-cancle-action {
+    margin-right: 7px;
+  }
+  .root-list-ul li {
+    margin-bottom: 15px;
+  }
+  .root-list-ul li .location {
+    font-size: 22px;
+  }
+  .root-list-ul li h5 {
+    font-size: 17.5px !important;
+  }
+  .root-list-ul li h6 {
+    font-size: 15px !important;
+  }
+  .root-list-ul li p {
+    margin-bottom: 2px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .transport-row {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .header-edit-input {
+    margin: 0 !important;
+  }
+  .bus-icon {
+    font-size: 15px !important;
+  }
+  .departure-time {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .pcoded-content {
+    padding: 0 0 !important;
+  }
+  .root-list-ul li {
+    margin-bottom: 12px;
+  }
+  .root-list-ul li .location {
+    font-size: 20px;
+  }
+  .root-list-ul li h5 {
+    font-size: 17px !important;
+  }
+  .root-list-ul li h6 {
+    font-size: 14px !important;
+  }
+  .root-list-ul li p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bus-root-body {
+    padding: 10px 8px 15px 8px;
+  }
+  .header-edit-input {
+    margin: 0 7px !important;
+  }
+  .departure-time {
+    font-size: 13.5px;
+  }
+  .bus-root-h5-text {
+    margin-top: 2px;
+    font-size: 15px !important;
+  }
+  .bus-root-h5-text i {
+    font-size: 16px;
+  }
+  .pp-cancle-action {
+    margin-right: 7px;
+  }
+  .root-list-ul li {
+    margin-bottom: 10px;
+  }
+  .root-list-ul li h5 {
+    font-size: 15px !important;
+  }
+  .root-list-ul li h6 {
+    font-size: 13px !important;
+  }
+  .root-list-ul li p {
+    font-size: 12.5px;
+    font-weight: 300;
+    margin-bottom: 0px;
+  }
+}
+
+/************************** style.scss ***************************************/
+
+/**********************************************************************************
+                            Transport Component css
+**********************************************************************************/
+/********** Add Card Button **********/
+.main-add-btn {
+  bottom: 25px;
+  right: 25px;
+  position: fixed !important;
+}
+
+/* Inside Pickup Card */
+.pickup-card {
+  border-radius: 5px;
+  margin: 11px;
+  padding: 0 !important;
+  border: 0;
+  box-shadow: 0 3px 5px rgb(218, 218, 218);
+}
+
+/* Pickup Header Custom HR */
+hr.pickup-Header-Hr {
+  margin: 0 0;
+  border-top: 1px solid #e3e3e3;
+}
+
+/************** Edit UI *************/
+.edit-input {
+  width: 20vw;
+  max-width: 100% !important;
+  padding: 4px;
+  margin: 7px 0;
+  border-radius: 3px;
+  border: 1px solid rgba(170, 170, 170, 0.2);
+}
+.edit-input::placeholder {
+  color: rgb(199, 199, 199);
+  padding-left: 5px;
+  font-weight: 400 !important;
+  letter-spacing: 0.3px !important;
+}
+.edit-input:focus {
+  border: 1px solid #4fc7ff;
+}
+
+.save-button {
+  width: 30px !important;
+  height: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #04a9f5 !important;
+  box-shadow: none !important;
+}
+.save-button i {
+  font-size: 16px;
+  top: -1px;
+  position: relative;
+}
+
+/************** Add & Submit Btn *************/
+.add-pickup-btn {
+  color: #fff;
+  letter-spacing: 0.5px;
+  padding: 0px 15px !important;
+  background-color: #04a9f5 !important;
+  box-shadow: none !important;
+}
+.submit-pickup-btn {
+  border: 0;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  padding: 0px 15px !important;
+  background-color: #00d134 !important;
+  box-shadow: none !important;
+}
+
+/************************************************************************
+                            Meadia Query
+************************************************************************/
+@media screen and (max-width: 1600px) {
+  .pickup-card-body {
+    margin: 7px 15px 0px 35px;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .pickup-card {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .edit-input {
+    width: 30vw;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .add-pickup-btn {
+    height: 33px !important;
+    padding: 0px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .submit-pickup-btn {
+    height: 33px !important;
+    padding: 0px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pickup-card {
+    box-shadow: 0 0 5px #c5c5c5;
+    margin: 15px -5px !important;
+  }
+  .edit-input {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pickup-header-space {
+    padding: 1px 7px;
+  }
+  .edit-input {
+    width: 73vw;
+  }
+  .add-pickup-btn {
+    padding: 3px 10px !important;
+  }
 }
