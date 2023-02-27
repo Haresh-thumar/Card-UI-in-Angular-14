@@ -76,3 +76,71 @@
   align-items: center;
   box-sizing: border-box;
 }
+
+/******************************* Rushabh *********************************/
+/*---- Request Filter Section ----*/
+.request-filter-section {
+  width: 60% !important;
+  margin: 0 auto !important;
+}
+
+.mainfilter-row {
+  width: 100%;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.from-Date {
+  font-size: 12px !important;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.to-Date {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.3px;
+}
+
+.user-text {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 10px 0 15px;
+}
+
+.date-picker[type="month"] {
+  padding: 3px 12px;
+  margin: 0 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(208, 208, 208) !important;
+}
+
+.date-picker::placeholder {
+  font-size: 15px !important;
+  color: silver !important;
+}
+
+.search-input {
+  padding: 5px 15px;
+  border-radius: 3px;
+  margin: 0 15px;
+  outline: none;
+  position: relative;
+  top: 9px;
+  border: 1px solid rgb(208, 208, 208);
+}
+
+.btn-search {
+  background-color: #fff;
+  color: #4d6d9b;
+  padding: 5px 11px;
+  border-radius: 3px;
+  position: relative;
+  top: 9px;
+  border: 1px solid #4d6d9b;
+}
+
+.btn-search:hover {
+  color: #fff;
+  background-color: #4d6d9b;
+}
